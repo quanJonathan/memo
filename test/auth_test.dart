@@ -103,7 +103,6 @@ class MockAuthProvider implements AuthProvider {
 
   @override
   Future<void> initialize() async {
-    await Future.delayed(const Duration(seconds: 1));
     _isInitialized = true;
   }
 
@@ -155,6 +154,12 @@ class MockAuthProvider implements AuthProvider {
   @override
   Future<void> logout() {
     // TODO: implement logout
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<void> sendPasswordReset({required String email}) {
+    // TODO: implement sendPasswordReset
     throw UnimplementedError();
   }
 }
